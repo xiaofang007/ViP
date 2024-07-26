@@ -1,3 +1,4 @@
+# ViP
 This is the official code for our MICCAI 2024 (Early Accepted) paper:
 > Aligning Medical Images with General Knowledge from Large Language Models  
 > Xiao Fang*, Yi Lin*, Dong Zhang, Kwang-Ting Cheng, Hao Chen
