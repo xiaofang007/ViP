@@ -1,0 +1,14 @@
+{
+    "melanoma":[
+        "The spot is asymmetric on both sides",
+        "The spot has blurry, or jagged edges",
+        "The spot has multiple colors, like brown, black, blue, red, or white",
+        "Small, dark areas within the spot"
+    ],
+    "nevus":[
+        "The spot is symmetric on both sides",
+        "The spot has clear, well-defined edges",
+        "The spot has a consistent color, usually brown, tan or black",
+        "Redness or swelling around the spot"
+    ]
+}

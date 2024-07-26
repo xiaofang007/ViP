@@ -1,0 +1,14 @@
+{
+    "normal lung":[
+        "Normal Shape and size",
+        "Sharp and clear lung borders",
+        "Presence of lung markings",
+        "Absence of focal opacities"
+    ],
+    "pneumonia":[
+        "Presence of pleural effusion",
+        "Presence of cavitation",
+        "Presence of consolidation",
+        "Air bronchogram sign"
+    ]
+}
