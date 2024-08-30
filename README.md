@@ -22,7 +22,7 @@ python setup.py develop
 ```
 
 ### Data preparation
-Pneumonia: Please download data [here](https://data.mendeley.com/datasets/rscbjbr9sj/3). The data should be put in the following structure: 
+Pneumonia: Please download data [here](https://data.mendeley.com/datasets/rscbjbr9sj/3). We use the chest xray part. The data should be put in the following structure: 
 ```
 |-- /DATA/Pneumonia/chest_xray
 |  |-- train
