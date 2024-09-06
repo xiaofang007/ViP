@@ -1,6 +1,6 @@
 # ViP
 This is the official code for our MICCAI 2024 (Early Accepted) paper:
-> Aligning Medical Images with General Knowledge from Large Language Models  
+> [Aligning Medical Images with General Knowledge from Large Language Models](https://arxiv.org/pdf/2409.00341)
 > Xiao Fang*, Yi Lin*, Dong Zhang, Kwang-Ting Cheng, Hao Chen
 
 
@@ -82,6 +82,12 @@ bash scripts/ViP/main_derm.sh
 ## Citation
 Pleae cite the paper if you use the code.
 ```
+@article{fang2024aligning,
+  title={Aligning Medical Images with General Knowledge from Large Language Models},
+  author={Fang, Xiao and Lin, Yi and Zhang, Dong and Cheng, Kwang-Ting and Chen, Hao},
+  journal={arXiv preprint arXiv:2409.00341},
+  year={2024}
+}
 ```
 
 ## Acknowledgment
