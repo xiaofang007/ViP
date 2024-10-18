@@ -5,7 +5,10 @@ This is the official code for our MICCAI 2024 (Early Accepted, Oral) paper:
 
 
 ### Requirement
-We use Python 3.9 and CUDA 11.7.
+![Python](https://img.shields.io/badge/Python-3.9-blue?style=flat&logo=python)
+![CUDA](https://img.shields.io/badge/CUDA-11.7-green?style=flat&logo=nvidia
+)
+![PyTorch](https://img.shields.io/badge/PyTorch-1.13.1-EE4C2C?style=flat&logo=pytorch)
 ```
 # Clone the following repository
 git clone https://github.com/KaiyangZhou/Dassl.pytorch
@@ -47,24 +50,24 @@ Derm7pt: Please download data [here](https://derm.cs.sfu.ca/Welcome.html). We fo
 |   |-- train
 |       |-- melanoma
 |           |-- Aal002bis.jpg
-|           |--
+|           |--...
 |       |-- nevus
 |           |-- Aal012.jpg
-|           |--
+|           |--...
 |   |-- val
 |       |-- melanoma
 |           |-- Ael490.jpg
-|           |--
+|           |--...
 |       |-- nevus
 |           |-- Aal004.jpg
-|           |--
+|           |--...
 |   |-- test
 |       |-- melanoma
 |           |-- Aal002.jpg
-|           |--
+|           |--...
 |       |-- nevus
 |           |-- Aal008.jpg
-|           |--
+|           |--...
 ```
 We also provide the data split in the DATA folder.
 
