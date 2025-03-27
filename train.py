@@ -1,6 +1,7 @@
 import os
 import argparse
 import torch
+from trainers import cocoop, coop, maple, ViP, vpt
 from dassl.utils import setup_logger, set_random_seed, collect_env_info
 from dassl.config import get_cfg_default
 from dassl.engine import build_trainer
@@ -9,7 +10,6 @@ import datasets.oxford_pets
 import datasets.dtd
 import datasets.Pneumonia
 import datasets.Derm
-import trainers.ViP
 
 
 def print_args(args, cfg):
@@ -82,6 +82,36 @@ def extend_cfg(cfg):
     cfg.TRAINER.VIP.CLASS_TOKEN_POSITION = "end"  # 'middle' or 'end' or 'front'
     cfg.DATASET.NUM_SHOTS = 10000  # set full data to 10000 shots
     cfg.DATASET.SUBSAMPLE_CLASSES = "all"  # all, base or new
+
+    # Config for COOP
+    cfg.TEST.FINAL_MODEL = "best_val"
+    cfg.TRAINER.COOP = CN()
+    cfg.TRAINER.COOP.N_CTX = 4  # number of context vectors
+    cfg.TRAINER.COOP.CSC = False  # class-specific context
+    cfg.TRAINER.COOP.CTX_INIT = ""  # initialization words
+    cfg.TRAINER.COOP.PREC = "fp16"  # fp16, fp32, amp
+    cfg.TRAINER.COOP.CLASS_TOKEN_POSITION = "end"  # 'middle' or 'end' or 'front'
+
+    # Config for COCOOP
+    cfg.TRAINER.COCOOP = CN()
+    cfg.TRAINER.COCOOP.N_CTX = 4  # number of context vectors
+    cfg.TRAINER.COCOOP.CTX_INIT = ""  # initialization words
+    cfg.TRAINER.COCOOP.PREC = "fp16"  # fp16, fp32, amp
+
+    # Config for MaPLe
+    cfg.TRAINER.MAPLE = CN()
+    cfg.TRAINER.MAPLE.N_CTX = 4  # number of context vectors
+    cfg.TRAINER.MAPLE.CTX_INIT = ""  # initialization words
+    cfg.TRAINER.MAPLE.PREC = "fp16"  # fp16, fp32, amp
+    cfg.TRAINER.MAPLE.PROMPT_DEPTH = 9 # Max 12, minimum 0, for 1 it will act as shallow MaPLe (J=1)
+
+    # Config for bayesian prompt tuning
+    cfg.TRAINER.VPT = CN()
+    cfg.TRAINER.VPT.N_CTX = 4  # number of context vectors
+    cfg.TRAINER.VPT.L = 10  # number of monte carlo samples
+    cfg.TRAINER.VPT.CTX_INIT = ""  # initialization words
+    cfg.TRAINER.VPT.PREC = "fp16"  # fp16, fp32, amp
+    cfg.TRAINER.VPT.VPT_TYPE = "cocoopvpt"
 
 
 def setup_cfg(args):

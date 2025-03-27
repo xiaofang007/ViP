@@ -4,7 +4,7 @@
 
 # custom config
 DATA=./
-TRAINER=ViP
+TRAINER=CoOp
 Device_id=0
 DATASET=Pneumonia
 DESCRIPTOR_PATH=descriptors/descriptors_pneumonia.json  # descriptor path
@@ -32,9 +32,9 @@ do
             --dataset-config-file configs/datasets/${DATASET}.yaml \
             --config-file configs/trainers/${TRAINER}/${CFG}.yaml \
             --output-dir ${DIR} \
-            TRAINER.VIP.N_CTX ${NCTX} \
-            TRAINER.VIP.CSC ${CSC} \
-            TRAINER.VIP.CLASS_TOKEN_POSITION ${CTP} \
+            TRAINER.COOP.N_CTX ${NCTX} \
+            TRAINER.COOP.CSC ${CSC} \
+            TRAINER.COOP.CLASS_TOKEN_POSITION ${CTP} \
             DATASET.NUM_SHOTS ${SHOTS}
         fi
     done

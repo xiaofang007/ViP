@@ -72,7 +72,16 @@ Derm7pt: Please download data [here](https://derm.cs.sfu.ca/Welcome.html). We fo
 We also provide the data split in the DATA folder.
 
 ### Training & Evaluation
-We provide the shell scripts for training and evaluation.   
+We provide the following prompt tuning methods:
+| Method                    | Paper                                         |                             Configs                             |          Training Scripts          |
+|---------------------------|:----------------------------------------------|:---------------------------------------------------------------:|:----------------------------------:|
+| ViP                     | [link](https://arxiv.org/abs/2409.00341)                                     | [link](configs/trainers/ViP)  |       [link](scripts/ViP)        |
+| CoOp                      | [link](https://arxiv.org/abs/2109.01134) |                  [link](configs/trainers/CoOp)                  |        [link](scripts/CoOp)        |
+| CoCoOp                   | [link](https://arxiv.org/abs/2203.05557) |                 [link](configs/trainers/CoCoOp)                 |       [link](scripts/CoCoOp)       |
+| MaPLe                     | [link](https://arxiv.org/abs/2210.03117)                                     | [link](configs/trainers/MaPLe)  |       [link](scripts/MaPLe)        |
+| VPT                     | [link](https://arxiv.org/abs/2210.02390)                                     | [link](configs/trainers/VPT)  |       [link](scripts/VPT)        |
+
+We provide the use of shell scripts for training and evaluating ViP as an example.   
 Pneumonia:
 ```
 bash scripts/ViP/main_pneumonia.sh
