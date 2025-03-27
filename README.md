@@ -81,7 +81,7 @@ We provide the following prompt tuning methods:
 | MaPLe                     | [link](https://arxiv.org/abs/2210.03117)                                     | [link](configs/trainers/MaPLe)  |       [link](scripts/MaPLe)        |
 | VPT                     | [link](https://arxiv.org/abs/2210.02390)                                     | [link](configs/trainers/VPT)  |       [link](scripts/VPT)        |
 
-We provide the use of shell scripts for training and evaluating ViP as an example.   
+We provide the use of shell scripts for training and evaluation using ViP as an example.   
 Pneumonia:
 ```
 bash scripts/ViP/main_pneumonia.sh
