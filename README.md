@@ -92,7 +92,7 @@ bash scripts/ViP/main_derm.sh
 ```
 
 ## Citation
-Pleae cite the paper if you use the code.
+Please cite the paper if you use the code.
 ```
 @inproceedings{fang2024aligning,
   title={Aligning Medical Images with General Knowledge from Large Language Models},
